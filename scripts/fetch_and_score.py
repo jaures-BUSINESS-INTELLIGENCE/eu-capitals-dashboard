@@ -1,8 +1,8 @@
 import csv, json, math, time
 import requests
 
-# Point de départ : Paris (latitude, longitude)
-PARIS_LAT, PARIS_LON = 48.8566, 2.3522
+# Point de départ : Le Mans (latitude, longitude)
+ORIGIN_LAT, ORIGIN_LON = 48.0061, 0.1996  # Le Mans
 # kg de CO2 par km parcouru (valeur arrondie, à vérifier/mettre à jour)
 EMISSIONS_FACTOR_KG_PER_KM = 0.15
 
@@ -61,8 +61,9 @@ def main():
     with open("data/capitals.csv") as f:
         rows = list(csv.DictReader(f))
 
-    # 2) On retire Paris : on ne recommande pas d'aller là où l'on est déjà
-    dest_rows = [row for row in rows if row["capital"] != "Paris"]
+    # 2) Le Mans n'est pas dans la liste : rien à exclure, toutes les capitales
+    #    (Paris comprise) sont des destinations possibles
+    dest_rows = rows
     lats = [float(row["lat"]) for row in dest_rows]
     lons = [float(row["lon"]) for row in dest_rows]
 
@@ -80,7 +81,7 @@ def main():
     # 4) Calculer, pour chaque capitale, distance, CO2 et météo moyenne
     destinations = []
     for row, lat, lon, wx in zip(dest_rows, lats, lons, weather):
-        distance_km = haversine_km(PARIS_LAT, PARIS_LON, lat, lon)
+        distance_km = haversine_km(ORIGIN_LAT, ORIGIN_LON, lat, lon)
         daily = wx["daily"]
         avg_temp = sum(daily["temperature_2m_max"]) / len(daily["temperature_2m_max"])
         total_precip = sum(daily["precipitation_sum"])
