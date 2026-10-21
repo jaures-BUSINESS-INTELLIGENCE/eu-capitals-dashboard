@@ -17,3 +17,33 @@ réussite de l'opération baisse (si chaque appel marche 97 % du temps, les 26
 ne marchent ensemble que ~45 % du temps). Les appels viennent aussi de la
 même adresse partagée, donc le serveur peut la ralentir ou la bloquer.
 Une seule requête n'a qu'un risque d'échec et peut être réessayée en entier. -->
+## Stage 1: provenance (CO2 factor)
+Before publishing for real travelers, I would replace the rounded 0.15 value
+with the current official figure (for example from DEFRA or ADEME). I would
+write the source and the year next to it on the page, and I would check it
+again every year, because these values change.
+<!-- Avant de publier pour de vrais voyageurs, je remplacerais la valeur
+arrondie 0,15 par le chiffre officiel actuel (par exemple DEFRA ou ADEME).
+J'écrirais la source et l'année à côté sur la page, et je le revérifierais
+chaque année, car ces valeurs changent. -->
+
+## Stage 2: relative vs. absolute
+No, the real temperature of an average capital would not change. A
+temperature is a measurement, and adding a new city does not change the
+weather in the other cities. But its score would change. normalize() uses
+the best and the worst value in the list. For example, with temperatures
+10, 15 and 20, the city at 15 gets a score of 0.5. If I add a city at 0
+degrees, the city at 15 gets 0.75. The temperature is the same, but the
+score is different. So a KPI depends on choices we make (which cities are in
+the list, how we scale the values), while a measurement does not. This is
+the idea of CM2: a KPI is built by us, it is not a neutral fact.
+<!-- Non, la vraie température d'une capitale moyenne ne changerait pas.
+Une température est une mesure, et ajouter une ville ne change pas le temps
+des autres villes. Mais son score changerait. normalize() utilise la
+meilleure et la pire valeur de la liste. Par exemple, avec des températures
+de 10, 15 et 20, la ville à 15 a un score de 0,5. Si j'ajoute une ville à
+0 degré, la ville à 15 a 0,75. La température est la même, mais le score est
+différent. Donc un KPI dépend de choix que nous faisons (quelles villes
+sont dans la liste, comment on met les valeurs à l'échelle), alors qu'une
+mesure n'en dépend pas. C'est l'idée du CM2 : un KPI est construit par
+nous, ce n'est pas un fait neutre. -->
