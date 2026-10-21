@@ -53,3 +53,17 @@ have the best CO2 score, and CO2 counts for half of the final score.
 <!-- Ma prédiction est Bruxelles. C'est la capitale la plus proche de Paris,
 donc elle devrait avoir le meilleur score CO2, et le CO2 compte pour la moitié
 du score final. -->
+## Stage 6: was my prediction right?
+No. I predicted Brussels, but Madrid is first and Brussels is only fifth.
+Brussels has the best CO2 score (1.0), as I expected, but its weather score
+is very low (0.234) this week. Since weather counts for half of the final
+score, Madrid wins with a good weather score (0.803) and a good CO2 score
+(0.706). What surprised me was the weather data and the formula: I thought
+the distance would be enough, but the 50/50 formula punishes bad weather.
+<!-- Non. J'avais prédit Bruxelles, mais Madrid est première et Bruxelles
+seulement cinquième. Bruxelles a le meilleur score CO2 (1,0), comme prévu,
+mais son score météo est très bas (0,234) cette semaine. Comme la météo
+compte pour la moitié du score final, Madrid gagne avec un bon score météo
+(0,803) et un bon score CO2 (0,706). Ce qui m'a surpris, ce sont les
+données météo et la formule : je pensais que la distance suffirait, mais la
+formule 50/50 pénalise le mauvais temps. -->
