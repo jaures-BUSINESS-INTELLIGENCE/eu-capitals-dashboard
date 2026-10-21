@@ -84,3 +84,28 @@ pas la date. J'ajouterais un avertissement visible sur la page quand les
 données ont plus de 10 jours, et une alerte par e-mail quand le workflow
 échoue. GitHub arrête aussi les workflows programmés après 60 jours sans
 activité, et personne ne le verrait sur la page. -->
+## Stage 7: changing the origin
+I changed two files. In scripts/fetch_and_score.py I replaced the Paris
+coordinates with the coordinates of Le Mans (ORIGIN_LAT, ORIGIN_LON), used
+them in the distance calculation, and removed the line that excluded Paris,
+because Le Mans is not in the list. In docs/index.html I changed the title
+from "from Paris" to "from Le Mans" and the number of destinations from 26
+to 27. These were the right places because the script is where distance and
+CO2 are computed, and the page is where the text is shown.
+The best destination is not an absolute fact. It depends on where we start,
+because the distance, and so the CO2 score, changes with the origin. From
+Paris the top capital was Madrid with Brussels fifth; from Le Mans Madrid is
+still first but Paris is now third. A classmate with a different origin
+would probably get a different result.
+<!-- J'ai changé deux fichiers. Dans scripts/fetch_and_score.py, j'ai remplacé
+les coordonnées de Paris par celles du Mans (ORIGIN_LAT, ORIGIN_LON), je les
+ai utilisées dans le calcul de la distance, et j'ai supprimé la ligne qui
+excluait Paris, parce que Le Mans n'est pas dans la liste. Dans
+docs/index.html, j'ai changé le titre de « from Paris » en « from Le Mans »
+et le nombre de destinations de 26 à 27. C'étaient les bons endroits car le
+script calcule la distance et le CO2, et la page affiche le texte.
+La meilleure destination n'est pas un fait absolu. Elle dépend du point de
+départ, car la distance, donc le score CO2, change avec l'origine. Depuis
+Paris la première capitale était Madrid avec Bruxelles cinquième ; depuis
+Le Mans Madrid est toujours première mais Paris est maintenant troisième.
+Un camarade avec une autre origine aurait probablement un autre résultat. -->
