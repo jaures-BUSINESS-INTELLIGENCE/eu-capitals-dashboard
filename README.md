@@ -6,7 +6,7 @@ least CO2 to get there from Le Mans?
 <!-- Quelle capitale de l'UE offre le meilleur temps la semaine prochaine tout
 en produisant le moins de CO2 pour y aller depuis Le Mans ? -->
 
-**Live page:** https://jaures-business-intelligence.github.io/capitals-dashboard/
+**Live page:** https://jaures-business-intelligence.github.io/eu-capitals-dashboard/
 <!-- Page en ligne -->
 
 ## How it works
