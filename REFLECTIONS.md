@@ -67,3 +67,20 @@ compte pour la moitié du score final, Madrid gagne avec un bon score météo
 (0,803) et un bon score CO2 (0,706). Ce qui m'a surpris, ce sont les
 données météo et la formule : je pensais que la distance suffirait, mais la
 formule 50/50 pénalise le mauvais temps. -->
+## Stage 6: monitoring
+The one thing a visitor can look at is the line "Data last updated ..." at
+the bottom of the page. The workflow runs every Monday, so if the date is
+more than a week or two old, something is wrong. But this signal is not
+good enough on its own: the visitor has to notice it, and many will not
+look at the date. I would add a visible warning on the page when the data
+is more than 10 days old, and an email alert when the workflow fails.
+GitHub also stops scheduled workflows after 60 days without activity, and
+nobody would see that on the page.
+<!-- La seule chose qu'un visiteur peut regarder est la ligne « Data last
+updated ... » en bas de la page. Le workflow tourne chaque lundi, donc si la
+date a plus d'une ou deux semaines, il y a un problème. Mais ce signal ne
+suffit pas seul : le visiteur doit le remarquer, et beaucoup ne regarderont
+pas la date. J'ajouterais un avertissement visible sur la page quand les
+données ont plus de 10 jours, et une alerte par e-mail quand le workflow
+échoue. GitHub arrête aussi les workflows programmés après 60 jours sans
+activité, et personne ne le verrait sur la page. -->
