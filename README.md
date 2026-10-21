@@ -1,4 +1,3 @@
-# capitals-dashboard
 # EU capitals — sustainable vacation dashboard 
 <!-- Tableau de bord des capitales de l'UE pour des vacances durables (TD1) -->
 
