@@ -1,0 +1,27 @@
+name: Update capitals ranking
+
+"on":
+  schedule:
+    - cron: "0 6 * * 1"   # tous les lundis à 06:00 UTC
+  workflow_dispatch: {}    # permet de le lancer à la main depuis l'onglet Actions
+
+permissions:
+  contents: write          # droit d'écrire dans le dépôt
+
+jobs:
+  update:
+    runs-on: ubuntu-latest   # un ordinateur Linux fourni par GitHub
+    steps:
+      - uses: actions/checkout@v7           # récupère le contenu du dépôt
+      - uses: actions/setup-python@v7       # installe Python
+        with:
+          python-version: "3.12"
+      - run: pip install requests           # installe la bibliothèque pour appeler l'API
+      - run: python scripts/fetch_and_score.py   # lance ton script
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/rankings.json
+          git commit -m "Update rankings [automated]" || echo "Nothing to commit"
+          git push
