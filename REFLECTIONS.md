@@ -47,3 +47,9 @@ différent. Donc un KPI dépend de choix que nous faisons (quelles villes
 sont dans la liste, comment on met les valeurs à l'échelle), alors qu'une
 mesure n'en dépend pas. C'est l'idée du CM2 : un KPI est construit par
 nous, ce n'est pas un fait neutre. -->
+## Stage 3: prediction
+My prediction is Brussels. It is the capital closest to Paris, so it should
+have the best CO2 score, and CO2 counts for half of the final score.
+<!-- Ma prédiction est Bruxelles. C'est la capitale la plus proche de Paris,
+donc elle devrait avoir le meilleur score CO2, et le CO2 compte pour la moitié
+du score final. -->
